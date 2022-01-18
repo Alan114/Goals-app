@@ -5,7 +5,7 @@ import {
   View,
   TextInput,
   Button,
-  FlatList,
+  ScrollView,
 } from "react-native";
 
 export default function App() {
@@ -31,13 +31,13 @@ export default function App() {
         />
         <Button title="ADD" onPress={handleAddGoal} />
       </View>
-      <View>
+      <ScrollView>
         {courseGoals.map((goal) => (
           <View key={Math.random()} style={styles.listItem}>
             <Text>{goal}</Text>
           </View>
         ))}
-      </View>
+      </ScrollView>
     </View>
   );
 }
