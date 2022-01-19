@@ -11,6 +11,7 @@ export default function App() {
       ...currentGoals,
       { id: Math.random().toString(), value: goalTitle },
     ]);
+    console.log("working?");
   };
 
   const handleRemoveGoal = (goalId) => {
