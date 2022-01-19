@@ -9,21 +9,21 @@ const GoalInput = (props) => {
   };
 
   return (
-    // <Modal>
-    <View style={styles.inputContainer}>
-      <TextInput
-        placeholder="Course goal"
-        style={styles.input}
-        onChangeText={handleGoalInput}
-        value={enteredGoal}
-      />
-      <Button
-        title="ADD"
-        onPress={props.handleAddGoal.bind(this, enteredGoal)}
-        // onPress={() => props.handleAddGoal(enteredGoal)}
-      />
-    </View>
-    // </Modal>
+    <Modal visible={props.visible} animationType="slide">
+      <View style={styles.inputContainer}>
+        <TextInput
+          placeholder="Course goal"
+          style={styles.input}
+          onChangeText={handleGoalInput}
+          value={enteredGoal}
+        />
+        <Button
+          title="ADD"
+          onPress={props.handleAddGoal.bind(this, enteredGoal)}
+          // onPress={() => props.handleAddGoal(enteredGoal)}
+        />
+      </View>
+    </Modal>
   );
 };
 
